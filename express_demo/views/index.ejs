@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+	<div>1姓名：<%=data.name%></div>
+	<div>2年龄：<%=data.age%></div>
+	<div>3工作：<%=data.job%></div>
+	<ul>
+		<% data.arr.forEach(function(n,i){%>
+			<div><%= n.name%></div>
+			<div><%= n.age%></div>
+			<div><%= n.job%></div>
+		<%})%>
+	</ul>
+	<ul>
+		<%if(data.arr2.length>0){%>
+			<%data.arr2.forEach(function(n,i){%>
+				<div><%= n.g%></div>
+			<%})%>
+		<%}else{%>
+			<div>无内容</div>
+		<%}%>
+	</ul>
+	<div>
+		共有方法
+		<span>* <%= search('原有的')%></span>
+	</div>
+	<div>链接跳转</div>
+	<a href="/case">case</a>
+	<a href="/company">company</a>
+	<script src='javascripts/index.js'></script>
+</body>
+</html>
